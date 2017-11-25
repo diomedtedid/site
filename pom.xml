@@ -25,7 +25,7 @@
     </build>
 
     <properties>
-        <mysql.connector.ver>5.1.42</mysql.connector.ver>
+        <mysql.connector.ver>6.0.6</mysql.connector.ver>
         <dbcp.version>1.4</dbcp.version>
         <hibernate.ver>5.2.10.Final</hibernate.ver>
         <spring.version>4.3.10.RELEASE</spring.version>

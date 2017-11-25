@@ -36,8 +36,8 @@ public class ModelConfiguration {
     private String driverClass;
     @Value("${db.dialect}")
     private String hibernateDialect;
-    @Value("classpath:db.sql")
-    private Resource  scriptResource;
+//    @Value("classpath:db.sql")
+//    private Resource  scriptResource;
 
     @Bean(destroyMethod = "close")
     public BasicDataSource getDataSource() {

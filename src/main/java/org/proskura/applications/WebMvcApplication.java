@@ -1,19 +1,17 @@
 package org.proskura.applications;
 
+import org.proskura.configurations.ModelConfiguration;
 import org.proskura.configurations.WebConfiguration;
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
 /**
- * Main entry point to Spring MVC application.
  *
- * Also it register {@link org.springframework.web.servlet.DispatcherServlet} that handle
- * all requests.
  */
 public class WebMvcApplication extends AbstractAnnotationConfigDispatcherServletInitializer {
 
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] {} ;
+        return new Class[] {ModelConfiguration.class} ;
     }
 
     @Override

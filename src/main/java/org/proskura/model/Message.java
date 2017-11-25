@@ -1,12 +1,24 @@
 package org.proskura.model;
 
+import javax.persistence.*;
+
 /**
  * Created by User on 25.11.2017.
  */
+@Entity
+@Table (name = "message_from_site")
 public class Message {
+    @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
+
+    @Column(name = "email")
     private String email;
+
+    @Column(name = "name")
     private String name;
+
+    @Column(name = "message")
     private String message;
 
     public Message(String email, String name, String message) {
