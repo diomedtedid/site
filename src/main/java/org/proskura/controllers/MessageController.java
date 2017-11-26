@@ -27,7 +27,6 @@ public class MessageController {
         String email = (String)requestParam.get("email");
         String message = (String)requestParam.get("message");
 
-
         Message msg = new Message(email, name, message);
         messageService.save(msg);
 
