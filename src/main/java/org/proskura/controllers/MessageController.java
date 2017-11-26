@@ -22,10 +22,13 @@ public class MessageController {
 
 
     @PostMapping
-    public ModelAndView getMessage(@RequestParam Map requestParam) {
+    public ModelAndView getMessage(@RequestParam Map requestParam) throws Exception  {
         String name = (String)requestParam.get("name");
+        name = new String (name.getBytes ("ISO-8859-1"), "UTF-8");
         String email = (String)requestParam.get("email");
+        email = new String (name.getBytes ("ISO-8859-1"), "UTF-8");
         String message = (String)requestParam.get("message");
+        message = new String (name.getBytes ("ISO-8859-1"), "UTF-8");
 
         Message msg = new Message(email, name, message);
         System.out.println(msg);
