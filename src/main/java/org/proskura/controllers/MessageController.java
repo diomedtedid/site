@@ -31,7 +31,6 @@ public class MessageController {
         message = new String (name.getBytes ("ISO-8859-1"), "UTF-8");
 
         Message msg = new Message(email, name, message);
-        System.out.println(msg);
         messageService.save(msg);
 
         return new ModelAndView("redirect: /#contact");
