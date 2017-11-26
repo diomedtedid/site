@@ -58,7 +58,7 @@ public class ModelConfiguration {
         LocalContainerEntityManagerFactoryBean bean = new LocalContainerEntityManagerFactoryBean();
         bean.setDataSource(dataSource);
         bean.setJpaVendorAdapter(hibernateJpaVendorAdapter);
-        bean.setPackagesToScan("ua.goit.entity");
+        bean.setPackagesToScan("org.proskura.model");
         return bean;
     }
 

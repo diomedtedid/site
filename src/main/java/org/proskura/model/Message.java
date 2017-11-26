@@ -9,6 +9,7 @@ import javax.persistence.*;
 @Table (name = "message_from_site")
 public class Message {
     @Id
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 

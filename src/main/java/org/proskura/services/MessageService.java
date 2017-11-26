@@ -14,10 +14,11 @@ import org.springframework.transaction.annotation.Transactional;
 public class MessageService {
 
     @Autowired
-    private final MessageDAO messageDAO;
+    private MessageDAO messageDAO;
 
 
-    public <S extends Message> S save (S entity) {
+    @Transactional
+    public Message  save (Message entity) {
         return messageDAO.save(entity);
     }
 }

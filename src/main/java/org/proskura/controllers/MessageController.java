@@ -18,7 +18,7 @@ import java.util.Map;
 public class MessageController {
 
     @Autowired
-    private final MessageService messageService;
+    private MessageService messageService;
 
 
     @PostMapping
@@ -28,6 +28,7 @@ public class MessageController {
         String message = (String)requestParam.get("message");
 
         Message msg = new Message(email, name, message);
+        System.out.println(msg);
         messageService.save(msg);
 
         return new ModelAndView("redirect: /#contact");
