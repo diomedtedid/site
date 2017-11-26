@@ -39,13 +39,6 @@ public class WebConfiguration extends WebMvcConfigurerAdapter {
         return resolver;
     }
 
-    @Bean
-    public CharacterEncodingFilter filterRegistrationBean() {
-        CharacterEncodingFilter filter = new CharacterEncodingFilter();
-        filter.setEncoding("UTF-8");
-        filter.setForceEncoding(true);
 
-        return filter;
-    }
 
 }
