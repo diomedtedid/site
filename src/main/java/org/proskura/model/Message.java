@@ -1,6 +1,7 @@
 package org.proskura.model;
 
 import javax.persistence.*;
+import java.util.Date;
 
 /**
  * Created by User on 25.11.2017.
@@ -22,10 +23,17 @@ public class Message {
     @Column(name = "message")
     private String message;
 
-    public Message(String email, String name, String message) {
+    @Column(name = "ip")
+    private String ip;
+
+    @Column(name = "time")
+    private Date date;
+
+    public Message(String email, String name, String message, String ip) {
         this.email = email;
         this.name = name;
         this.message = message;
+        this.ip = ip;
     }
 
     public long getId() {
